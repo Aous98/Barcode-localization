@@ -1,0 +1,38 @@
+/home/aous/Desktop/MIPT/project/DATASET/to augment:
+files:
+before: original dataset numbered 1-325 (325)
+noisy: with noise numbered 326-650 (325)
+salt and peper: numbered 651-975 (325)
+random resize and crop : nembered 976-1254 (279) (new masks were done)
+blured: numbered 1255-1579 (325)
+contrast and brightness: (304 instead of 325)
+rotated20 and resized random: 1580-1903 (324) (need new masks)
+
+total number of new masks: 928
+
+folders in project:
+
+data 1: is the original 1539 images with masks (325 images with noise adding)
+data 3: 1539 images for train (around 65 to predict) resized to 512x512 , applied with model named model_data3_03
+DATASET: the original 325 images thst contains folder to augment
+
+
+UNTIL NOW: model_data3_03 is the best
+
+
+Making new masks:
+file: random resize and crop `DONE`
+    -976 --> 1075 ----> masked(deleted one image) and stored "/home/aous/Desktop/MIPT/project/DATASET/new data"
+    the temp csv is renamed to: t976-1075 and stored in : "/home/aous/Desktop/MIPT/project/DATASET/new data/new ground truth"
+    -1076 --> 1125 (1092 deleted)  t1076-1125.csv
+    -1126 --> 1254 (2 deleted 1140,1243) t1126-1254.csv
+
+===========================================
+FULL DATASET:
+path: '/home/aous/Desktop/MIPT/project/full data resized'
+files: train, predict, ground truth
+numbers:
+    - train: 3845 (0.8 train, 0.2 valid)
+    - predictions (306)
+
+
